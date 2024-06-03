@@ -15,7 +15,7 @@ public class CustomPieChart implements ExampleChart<org.knowm.xchart.PieChart> {
     @Override
     public org.knowm.xchart.PieChart getChart() {
         // Create Chart
-        org.knowm.xchart.PieChart chart = new PieChartBuilder().height(600).width(800).title("Budget Breakdown").theme(Styler.ChartTheme.GGPlot2).build();
+        org.knowm.xchart.PieChart chart = new PieChartBuilder().height(600).width(800).title("Budget Breakdown").theme(Styler.ChartTheme.XChart).build();
 
         // Customize Chart
         Color[] sliceColors = new Color[]{new Color(224, 68, 14), new Color(38, 23, 167), new Color(6, 222, 184), new Color(0x6CEC05), new Color(0x07A2F6), new Color(0xFCC508)};
