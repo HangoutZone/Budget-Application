@@ -410,6 +410,7 @@ public class BudgetApp {
         save.addActionListener(e -> {
             if (incomeTextField.getText().equalsIgnoreCase("") || incomeTextField.getText().isEmpty()) {
                 incomeTextField.setBackground(new Color(0xE7495B));
+                System.out.println("At least income has to be filled");
             } else {
                 JFileChooser chooser = new JFileChooser();
                 chooser.setCurrentDirectory(new File("."));
