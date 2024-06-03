@@ -244,7 +244,7 @@ public class BudgetApp {
         freeside.setBackground(Color.BLUE);
         freeside.setOpaque(true);
 
-        JPanel freesideTwo = new JPanel(new GridLayout(3,1));
+        JPanel freesideTwo = new JPanel(new GridLayout(3, 1));
         freesideTwo.setBackground(Color.BLUE);
         freesideTwo.setOpaque(true);
         freesideTwo.add(append);
@@ -318,8 +318,10 @@ public class BudgetApp {
         reset.addActionListener(e -> {
             data.removeAllElements();
             incomeTextField.setText("");
+            incomeTextField.setBackground(Color.WHITE);
             nameTextField.setText("");
             costTextField.setText("");
+            costTextField.setBackground(Color.WHITE);
             spending.setText("");
             spending.setVisible(false);
         });
@@ -381,17 +383,15 @@ public class BudgetApp {
 
                     double spendingResult = Double.parseDouble(calculate(data.elements(), income));
 
-                    if(spendingResult < 0) {
+                    if (spendingResult < 0) {
                         spending.setText("Spending vs Income: " + spendingResult);
                         spending.setForeground(new Color(0xE7495B));
                         spending.setVisible(true);
-                    }
-                    else if(spendingResult == 0) {
+                    } else if (spendingResult == 0) {
                         spending.setText("Spending vs Income: " + spendingResult);
                         spending.setForeground(Color.YELLOW);
                         spending.setVisible(true);
-                    }
-                    else{
+                    } else {
                         spending.setText("Spending vs Income: " + spendingResult);
                         spending.setForeground(Color.GREEN);
                         spending.setVisible(true);
@@ -465,7 +465,7 @@ public class BudgetApp {
         worker.execute();
     }
 
-    private String calculate(Enumeration<Item> items, double income){
+    private String calculate(Enumeration<Item> items, double income) {
         double spending = 0.0;
         while (items.hasMoreElements()) {
             Item i = (items.nextElement());

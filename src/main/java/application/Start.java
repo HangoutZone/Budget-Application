@@ -1,7 +1,5 @@
 package application;
 
-import application.BudgetApp;
-
 import javax.swing.SwingUtilities;
 
 public class Start {
