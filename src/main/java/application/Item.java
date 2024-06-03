@@ -1,11 +1,20 @@
+package application;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class Item {
     private String name;
     private Double cost;
+
+    private Item(){
+
+    }
+
+    @Override
+    public String toString() {
+        return getName() + "  |  " + getCost();
+    }
 }

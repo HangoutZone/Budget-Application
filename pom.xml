@@ -15,6 +15,16 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.knowm.xchart</groupId>
+            <artifactId>xchart-demo</artifactId>
+            <version>3.8.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.knowm.xchart</groupId>
+            <artifactId>xchart</artifactId>
+            <version>3.8.8</version>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.openjfx</groupId>-->
 <!--            <artifactId>javafx</artifactId>-->
@@ -42,7 +52,7 @@
 <!--                <artifactId>javafx-maven-plugin</artifactId>-->
 <!--                <version>${javafx.maven.plugin.version}</version>-->
 <!--                <configuration>-->
-<!--                    <mainClass>Driver</mainClass>-->
+<!--                    <mainClass>application.Driver</mainClass>-->
 <!--                </configuration>-->
 <!--            </plugin>-->
 <!--        </plugins>-->
