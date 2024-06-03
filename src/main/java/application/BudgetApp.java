@@ -483,26 +483,30 @@ public class BudgetApp {
 
         File file = new File(".");
 
-        //get list of files in directory with default name
-        for (String x : file.list()) {
-            if (x.matches("[bB]udget\\d*.txt")) {
-                names.add(x);
+        try {
+            //get list of files in directory with default name
+            for (String x : file.list()) {
+                if (x.matches("[bB]udget\\d+.txt")) {
+                    names.add(x);
+                }
             }
+
+            for (String x : names) {
+                parse.add(x.split("\\D+"));
+            }
+
+            for (String[] x : parse) {
+                results.add(Integer.parseInt(x[1]));
+            }
+
+            results = (ArrayList<Integer>) results.stream().sorted().collect(Collectors.toList());
+
+            int append = results.get(results.size() - 1) + 1;
+
+            return "Budget" + append + ".txt";
+        }catch (Exception e){
+            return "Budget1.txt";
         }
-
-        for (String x : names) {
-            parse.add(x.split("\\D+"));
-        }
-
-        for (String[] x : parse) {
-            results.add(Integer.parseInt(x[1]));
-        }
-
-        results = (ArrayList<Integer>) results.stream().sorted().collect(Collectors.toList());
-
-        int append = results.get(results.size() - 1) + 1;
-
-        return "Budget" + append + ".txt";
     }
 }
 
